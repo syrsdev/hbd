@@ -1,0 +1,17 @@
+.bg-pink{
+    background-color: #ba0453;
+}
+
+.ping{
+    animation: ping infinite 2s;
+    transition: all 2s;
+}
+
+@keyframes ping {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+}
