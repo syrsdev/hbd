@@ -32,7 +32,9 @@
                     klik dulu tombolnya
                 </p>
             </div>
-            <div id="carousel-sec"></div>
+            <div id="carousel-sec">
+                <audio id="lagu" src="Crush - Beautiful.mp3"></audio>
+            </div>
         </div>
 
         <script
@@ -44,7 +46,7 @@
         <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
         <script>
             let body = document.getElementsByTagName("body");
-
+            let lagu = document.getElementById("lagu");
             let btn = document.getElementById("btnCon");
             const consec = document.getElementById("confetti-sec");
             function confet() {
@@ -52,6 +54,8 @@
                     consec.classList.add("d-none");
                     body[0].classList.add("bg-pink");
                     body[0].classList.remove("bg-dark");
+                    lagu.play();
+
                     confetti({
                         particleCount: 100,
                         spread: 70,
