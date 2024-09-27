@@ -12,7 +12,18 @@
         />
         <link rel="stylesheet" href="style.css" />
     </head>
-    <body id="dasar" class="bg-dark" style="transition: all 2s">
+    <body
+        id="dasar"
+        class="bg-dark text-white"
+        style="
+            transition: all 2s;
+            background-image: url(/img/bg-hbd.jpg);
+            background-repeat: no-repeat;
+            object-fit: fill;
+            background-size: 100%;
+            background-position: center;
+        "
+    >
         <div
             class="w-full d-flex flex-column justify-content-center align-items-center"
             style="height: 100vh"
@@ -23,91 +34,161 @@
             >
                 <button
                     id="btnCon"
-                    class="btn ping rounded-circle py-3 px-4 btn-secondary d-flex align-items-center justify-content-center"
-                    style="font-size: 40px"
+                    class="btn ping rounded-circle p-4 btn-secondary d-flex align-items-center justify-content-center"
+                    style="font-size: 45px"
                 >
                     🎉
                 </button>
-                <p class="text-white mt-3 text-center" id="tsparticles">
-                    klik dulu tombolnya
+                <p class="text-white mt-4 text-center fw-bold" id="tsparticles">
+                    Klik dulu tombolnya
                 </p>
             </div>
-            <div id="carousel-sec">
+            <div id="carousel-sec" class="d-none">
                 <audio id="lagu" src="Crush - Beautiful.mp3"></audio>
-                <div
-                    class="d-flex container-caro justify-content-between overflow-x-scroll text-center"
-                    style="height: max-content"
-                    dir="ltr"
-                >
-                    <div class="card" style="min-width: 85%">
-                        <div
-                            class="card-body d-flex flex-column align-items-center d-flex flex-column align-items-center"
-                        >
-                            <img
-                                src="/img/Stiker 43.gif"
-                                alt="hai vanee"
-                                width="100%"
-                                height="180"
-                                class="object-fit-contain"
-                            />
-                            <p>Hi Vanee</p>
+                <div class="carousel-wrapper">
+                    <div class="container-caro">
+                        <div class="card">
+                            <div
+                                class="card-body d-flex flex-column align-items-center"
+                            >
+                                <img
+                                    src="/img/Stiker 43.gif"
+                                    alt="hai vanee"
+                                    width="100%"
+                                    height="180"
+                                    class="object-fit-contain"
+                                />
+                                <p>Hi Vanee</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div
+                                class="card-body d-flex flex-column align-items-center"
+                            >
+                                <img
+                                    src="/img/Stiker 40.gif"
+                                    alt="Cieee, ada yang ultah"
+                                    width="100%"
+                                    height="180"
+                                    class="object-fit-contain"
+                                />
+                                <p>Cieee, ada yang ultah</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div
+                                class="card-body d-flex flex-column align-items-center"
+                            >
+                                <img
+                                    src="/img/Stiker 41.gif"
+                                    alt="Dah makin dewasa aja nih"
+                                    width="100%"
+                                    height="180"
+                                    class="object-fit-contain"
+                                />
+                                <p>Dah makin dewasa aja nih</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div
+                                class="card-body d-flex flex-column align-items-center"
+                            >
+                                <img
+                                    src="/img/Stiker 2.gif"
+                                    alt="Happy Birthday yaa"
+                                    width="100%"
+                                    height="180"
+                                    class="object-fit-contain"
+                                />
+                                <p>Happy Birthday yaa</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div
+                                class="card-body d-flex flex-column align-items-center"
+                            >
+                                <img
+                                    src="/img/Stiker 28.gif"
+                                    alt="Sehat dan bahagia selalu"
+                                    width="100%"
+                                    height="180"
+                                    class="object-fit-contain"
+                                />
+                                <p>Sehat dan bahagia selalu</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="card" style="min-width: 85%">
-                        <div
-                            class="card-body d-flex flex-column align-items-center"
-                        >
-                            <img
-                                src="/img/Stiker 40.gif"
-                                alt="tes"
-                                width="100%"
-                                height="180"
-                                class="object-fit-contain"
-                            />
-                            <p>Cieee, ada yang ultah</p>
-                        </div>
+                    <button
+                        class="next btn btn-success"
+                        id="next"
+                        data-bs-toggle="modal"
+                    >
+                        Next
+                    </button>
+                </div>
+            </div>
+            <div
+                id="ucapan-sec"
+                class="d-none justify-content-center align-items-center flex-column"
+            >
+                <div class="cont">
+                    <p class="typed text-center">Nih kuenya hehe</p>
+                </div>
+                <img src="/img/kue.png" alt="kue" width="50%" />
+                <div class="cont">
+                    <p class="typed-2 text-center">
+                        Sorry kuenya ga asli hehe...
+                    </p>
+                </div>
+            </div>
+            <div id="last-sec" class="d-none">
+                <div class="cont">
+                    <p class="typed-3 text-center">Happy Special Day~</p>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="modal fade"
+            id="modal"
+            tabindex="-1"
+            aria-labelledby="modalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-dark" id="modalLabel">
+                            Mau kue gak??
+                        </h1>
                     </div>
-                    <div class="card" style="min-width: 85%">
-                        <div
-                            class="card-body d-flex flex-column align-items-center"
-                        >
-                            <img
-                                src="/img/Stiker 41.gif"
-                                alt="tes"
-                                width="100%"
-                                height="180"
-                                class="object-fit-contain"
-                            />
-                            <p>Dah makin dewasa aja nih</p>
-                        </div>
+                    <div class="modal-body text-center">
+                        <img src="/img/Stiker 18.gif" alt="mau kue gak" />
                     </div>
-                    <div class="card" style="min-width: 85%">
-                        <div
-                            class="card-body d-flex flex-column align-items-center"
+                    <div class="modal-footer position-relative">
+                        <button
+                            type="button"
+                            class="btn btn-primary position-absolute"
+                            style="left: 20px"
+                            id="mau"
+                            data-bs-dismiss="modal"
                         >
-                            <img
-                                src="/img/Stiker 2.gif"
-                                alt="tes"
-                                width="100%"
-                                height="180"
-                                class="object-fit-contain"
-                            />
-                            <p>Happy Birthday yaa</p>
-                        </div>
-                    </div>
-                    <div class="card" style="min-width: 85%">
-                        <div
-                            class="card-body d-flex flex-column align-items-center"
+                            MAUUU
+                        </button>
+                        <button
+                            type="button"
+                            class="btn"
+                            style="left: 20px; visibility: hidden"
                         >
-                            <img
-                                src="/img/Stiker 28.gif"
-                                alt="tes"
-                                width="100%"
-                                height="180"
-                                class="object-fit-contain"
-                            />
-                            <p>Sehat dan bahagia selalu</p>
-                        </div>
+                            -
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-secondary position-absolute"
+                            id="kabur"
+                        >
+                            Gak mau.
+                        </button>
                     </div>
                 </div>
             </div>
@@ -120,29 +201,103 @@
         ></script>
         <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
         <script>
-            let body = document.getElementsByTagName("body");
-            let lagu = document.getElementById("lagu");
-            let btn = document.getElementById("btnCon");
+            document.addEventListener("DOMContentLoaded", function () {
+                let sec = 0;
+                let body = document.getElementsByTagName("body");
+                let lagu = document.getElementById("lagu");
+                let btn = document.getElementById("btnCon");
+                let btnMau = document.getElementById("mau");
 
-            const consec = document.getElementById("confetti-sec");
-            const carosec = document.getElementById("carousel-sec");
-            function confet() {
-                btn.addEventListener("click", function () {
-                    consec.classList.add("d-none");
-                    body[0].classList.add("bg-pink");
-                    body[0].classList.remove("bg-dark");
-                    // lagu.play();
+                const consec = document.getElementById("confetti-sec");
+                const carosec = document.getElementById("carousel-sec");
+                const ucapsec = document.getElementById("ucapan-sec");
+                const lastsec = document.getElementById("last-sec");
+                function confet() {
+                    btn.addEventListener("click", function () {
+                        consec.classList.add("d-none");
+                        sec = 1;
+                        if (sec == 1) {
+                            carosec.classList.remove("d-none");
+                            carosec.classList.add("caro-show");
+                        }
 
-                    confetti({
-                        particleCount: 100,
-                        spread: 70,
-                        origin: { y: 0.6 },
+                        btnMau.addEventListener("click", function () {
+                            sec = 2;
+                            console.log(sec);
+                            if (sec == 2) {
+                                carosec.classList.add("d-none");
+                                carosec.classList.remove("caro-show");
+
+                                ucapsec.classList.remove("d-none");
+                                ucapsec.classList.add("d-flex");
+                                setTimeout(function () {
+                                    sec = 3;
+                                    if (sec == 3) {
+                                        ucapsec.classList.add("d-none");
+                                        ucapsec.classList.remove("d-flex");
+
+                                        lastsec.classList.remove("d-none");
+                                        lastsec.classList.add("d-flex");
+                                    }
+                                }, 4000);
+                            }
+                        });
+
+                        // lagu.play();
+
+                        confetti({
+                            particleCount: 100,
+                            spread: 70,
+                            origin: { y: 0.6 },
+                        });
+
+                        let currentIndex = 0;
+                        const container =
+                            document.querySelector(".container-caro");
+                        const cards = document.querySelectorAll(".card");
+                        const cardWidth = cards[0].offsetWidth + 10; // Lebar kartu ditambah jarak antar kartu
+                        const totalCards = cards.length;
+
+                        const nextButton = document.getElementById("next");
+
+                        function scrollToSlide(index) {
+                            const scrollAmount = index * cardWidth;
+                            container.scrollTo({
+                                left: scrollAmount,
+                                behavior: "smooth",
+                            });
+                        }
+
+                        nextButton.addEventListener("click", () => {
+                            if (currentIndex < totalCards - 1) {
+                                currentIndex++;
+                                scrollToSlide(currentIndex);
+
+                                if (currentIndex == 4) {
+                                    nextButton.setAttribute(
+                                        "data-bs-target",
+                                        "#modal"
+                                    );
+                                }
+                            }
+                        });
                     });
+                }
+
+                confet();
+
+                const kabur = document.getElementById("kabur");
+                let hitungKabur = 0;
+                kabur.addEventListener("click", function () {
+                    if (hitungKabur % 2 == 0) {
+                        hitungKabur += 1;
+                        kabur.setAttribute("style", "right: 100px");
+                    } else {
+                        hitungKabur += 1;
+                        kabur.setAttribute("style", "right: 0px");
+                    }
                 });
-            }
-            confet();
+            });
         </script>
-        <!-- 
-        <script src="main.js"></script> -->
     </body>
 </html>
