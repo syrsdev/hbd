@@ -15,3 +15,20 @@
         transform: scale(1.1);
     }
 }
+.container-caro{
+    width: 40vw;
+    gap: 10px;
+    scroll-snap-type: x mandatory;
+}
+.container-caro > div{
+text-align: center;
+    scroll-snap-align: center;
+    flex: none;
+}
+
+@media screen and (max-width: 768px) {
+    .container-caro{
+        width: 80vw;
+    }
+    
+}
